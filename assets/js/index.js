@@ -122,23 +122,29 @@ function drawSlogan(draw) {
   let anchor = randomOption(["start", "middle" /*, "end"*/]);
   let rotation = randomOption([0, 90, 0, -90]);
 
-  if (wrap === "word") {
-    text = text.split(" ").join("\n");
-    size = rotation === 0 ? size * 1.9 : size * 1.7;
-  }
-
-  if (wrap === "half") {
-    const half = Math.floor(text.length / 2);
-    text =
-      text.substr(0, Math.floor(text.length / 2)).trim() +
-      "\n" +
-      text.substr(half).trim();
-    size = size * 1.9;
-    anchor = "middle";
-  }
-
-  if (wrap === "none" && rotation === 0) {
-    size = size * 0.8;
+  switch(wrap)
+  {
+    case "word": {
+      text = text.split(" ").join("\n");
+      size = rotation === 0 ? size * 1.9 : size * 1.7;
+      break;
+    }
+    case "half": {
+      const half = Math.floor(text.length / 2);
+      text =
+        text.substr(0, Math.floor(text.length / 2)).trim() +
+        "\n" +
+        text.substr(half).trim();
+      size = size * 1.9;
+      anchor = "middle";
+      break;
+    }
+    case "none": {
+      if (rotation === 0) {
+        size = size * 0.8;
+      }
+      break;
+    }
   }
 
   let leading = randomNumber(1.1, 1.4);
@@ -213,7 +219,9 @@ function drawDate(draw) {
 function drawStars(draw) {
   const group = draw.group();
 
-  for (let i = 0; i < 120; i++) {
+  const STAR_COUNT = 120;
+
+  for (let i = 0; i < STAR_COUNT; i++) {
     const star = group.circle(randomNumber(0.1, 2)).fill("#fff");
     positionRandomly(draw, star);
   }
