@@ -26,7 +26,6 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 	}
 
 	.stars {
-		/* background: #000 url(stars.png) repeat top center; */
 		z-index: -2;
 	}
 
