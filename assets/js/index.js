@@ -219,7 +219,7 @@ function drawDate(draw) {
 function drawStars(draw) {
   const group = draw.group();
 
-  const STAR_COUNT = 120;
+  const STAR_COUNT = 160;
 
   for (let i = 0; i < STAR_COUNT; i++) {
     const star = group.circle(randomNumber(0.1, 2)).fill("#fff");
