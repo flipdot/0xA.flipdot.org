@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 main {
 	width: var(--page-width);
 	margin: 0 auto;
+	padding: 0 16px;
 }
 
 h1 {
@@ -114,21 +115,17 @@ address {
 }
 
 .columns {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-gap: 24px;
+	grid-template-columns: repeat(auto-fill, calc(var(--page-width) / 2 - 32px));
+	grid-auto-flow: row;
 }
-.columns div {
-	width: 100%;
-}
-
 .journey img {
 	width: 16px;
 }
-/*
-.journey dd {
-	margin: 0;
+dd {
+	margin-bottom: 16px;
 }
-*/
 
 footer {
 	margin: 16px 0;
