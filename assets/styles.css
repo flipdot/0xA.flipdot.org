@@ -17,6 +17,12 @@
 	font-style: normal;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html {
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, system-ui, 'Segoe UI', Roboto, Ubuntu, Arial, sans-serif;
 	color: var(--font-color);
@@ -53,10 +59,16 @@ h2 {
 	font-family: 'ISOCPEUR';
 	font-weight: normal;
 	font-style: normal;
+	height: 100vh;
+	margin-bottom: 40px;
 }
 
 .lead h1 {
 	font-size: 6rem;
+}
+
+.hidden {
+	display: none !important;
 }
 
 a {

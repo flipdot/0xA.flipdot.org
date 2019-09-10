@@ -1,3 +1,7 @@
 _site
 .sass-cache
 _data/**/*.js
+
+node_modules
+dist
+.cache
