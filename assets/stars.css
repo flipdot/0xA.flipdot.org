@@ -1,17 +1,13 @@
-/* Parts of this file and the assets are licensed under the following license: */
-/* ==============================================================================================
-This copyright notice must be kept untouched in the stylesheet at all times.
-The original version of this stylesheet and the associated (x)html
-is available at http://www.script-tutorials.com/night-sky-with-twinkling-stars/
-Copyright (c) Script Tutorials. All rights reserved.
-This stylesheet and the associated (x)html may be modified in any way to fit your requirements.
-================================================================================================= */
-
 @media not screen and (max-width: 812px) {
 
 	@keyframes move-overlay {
 		from { background-position: 0 0; }
 		to { background-position: -10000px 5000px; }
+	}
+
+	@keyframes spin {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
 	}
 
 	.stars, .stars-overlay {
@@ -27,6 +23,9 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 
 	.stars {
 		z-index: -2;
+	}
+	.stars svg {
+		animation: spin 800s linear infinite;
 	}
 
 	.stars-overlay {
