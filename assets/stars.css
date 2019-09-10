@@ -37,27 +37,13 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 		animation: move-overlay 800s linear infinite;
 	}
 
-	/*
-	.rocket-overlay {
-		background: transparent url(rocket.svg) no-repeat;
-		animation: move-overlay 800s linear infinite;
-	}
-	*/
-
 	main {
 		z-index: 9001;
+		position: absolute;
 	}
 	section {
 		background-color: rgba(0, 0, 0, 0.8);
 	}
-
-	/*
-	@supports (backdrop-filter: blur()) {
-		main { backdrop-filter: blur(50px); }
-	}
-	@supports not (backdrop-filter: blur()) {
-	}
-	*/
 }
 
 @media only screen and (max-width: 812px) {
