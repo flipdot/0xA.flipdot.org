@@ -1,0 +1,58 @@
+@media not screen and (max-width: 812px) {
+
+	@keyframes move-overlay {
+		from { background-position: 0 0; }
+		to { background-position: -10000px 5000px; }
+	}
+
+	.stars, .stars-overlay, main {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.stars {
+		background: #000 url(stars.png) repeat top center;
+		z-index: 0;
+	}
+
+	.stars-overlay {
+		background: transparent url(overlay.png) repeat top center;
+		z-index: 1;
+
+		animation: move-overlay 800s linear infinite;
+	}
+
+	/*
+	.rocket-overlay {
+		background: transparent url(rocket.svg) no-repeat;
+		animation: move-overlay 800s linear infinite;
+	}
+	*/
+
+	main {
+		z-index: 9001;
+	}
+	section {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	/*
+	@supports (backdrop-filter: blur()) {
+		main { backdrop-filter: blur(50px); }
+	}
+	@supports not (backdrop-filter: blur()) {
+	}
+	*/
+}
+
+@media only screen and (max-width: 812px) {
+	.stars, .stars-overlay {
+		display: none;
+	}
+}

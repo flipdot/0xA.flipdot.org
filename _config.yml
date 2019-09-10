@@ -1,0 +1,11 @@
+title: Hackumenta
+description: 10 Years in Space
+baseurl: "/"
+url: "https://0xa.flipdot.org"
+markdown: kramdown
+sass:
+  style: compressed
+links:
+  E-mail: "mailto:hallo@holz.nu"
+  GitHub: //github.com/nikeee
+  StackOverflow: //stackoverflow.com/users/785210
