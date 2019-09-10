@@ -1,7 +1,0 @@
-title: Hackumenta
-description: 10 Years in Space
-baseurl: "/"
-url: "https://0xa.flipdot.org"
-markdown: kramdown
-sass:
-  style: compressed
