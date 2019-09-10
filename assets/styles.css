@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 main {
 	width: var(--page-width);
 	margin: 0 auto;
-	padding: 0 16px;
+	padding: 0 8px;
 }
 
 h1 {
