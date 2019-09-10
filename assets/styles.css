@@ -89,7 +89,7 @@ a:hover, a:active {
 .map-link {
 	display: block;
 	text-align: center;
-	margin: 16px 0 0 0;
+	margin: 16px 0;
 }
 
 b {
@@ -101,7 +101,9 @@ article p {
 }
 
 p {
-	text-align: justify;
+	text-align: left;
+	line-height: 1.35em;
+	font-size: 1.15em;
 }
 
 @media only screen and (max-width: 812px) {
@@ -111,7 +113,7 @@ p {
 
 address {
 	font-style: normal;
-	line-height: inherit;
+	line-height: 1.3em;
 }
 
 .columns {
@@ -123,12 +125,19 @@ address {
 .journey img {
 	width: 16px;
 }
+
+dt {
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+
 dd {
 	margin-bottom: 16px;
+	line-height: 1.35em;
 }
 
 footer {
 	margin: 16px 0;
-	font-size: 10px;
+	font-size: 1.2em;
 	text-align: center;
 }
