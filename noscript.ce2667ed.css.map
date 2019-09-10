@@ -1,0 +1,1 @@
+{"version":3,"sources":["noscript.css"],"names":[],"mappings":"AAAA,OACC,qFACD,CACA,MACC,WAAY,CACZ,uBAAwB,CACxB,gBAAiB,CACjB,iBACD","file":"noscript.ce2667ed.css","sourceRoot":"..","sourcesContent":[".stars {\n\tbackground: #000 url(stars.svg) repeat top center;\n}\n.lead {\n\theight: auto;\n\twidth: var(--page-width);\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n"]}
