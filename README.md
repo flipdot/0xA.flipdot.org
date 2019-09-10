@@ -1,6 +1,5 @@
 # [0xA.flipdot.org](https://0xA.flipdot.org)
-
-Currently available at: https://flipdot.github.io/0xA.flipdot.org
+The website of the Hackumenta.
 
 ## Install Dependencies
 You need NPM and Node.js `>= 10`.
