@@ -14,7 +14,7 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 		to { background-position: -10000px 5000px; }
 	}
 
-	.stars, .stars-overlay, main {
+	.stars, .stars-overlay {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -27,20 +27,16 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 
 	.stars {
 		background: #000 url(stars.png) repeat top center;
-		z-index: 0;
+		z-index: -2;
 	}
 
 	.stars-overlay {
 		background: transparent url(overlay.png) repeat top center;
-		z-index: 1;
+		z-index: -1;
 
 		animation: move-overlay 800s linear infinite;
 	}
 
-	main {
-		z-index: 9001;
-		position: absolute;
-	}
 	section {
 		background-color: rgba(0, 0, 0, 0.8);
 	}
