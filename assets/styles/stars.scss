@@ -30,11 +30,11 @@
 
 	#constellations {
 		z-index: -2;
-		position: absolute;
+		position: fixed;
 		top: 50px;
 		left: 50px;
-		width: 101px;
-		height: 97px;
+		width: 383px;
+		height: 365px;
 		background: url(../images/wagen.svg) no-repeat;
 	}
 
