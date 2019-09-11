@@ -34,17 +34,6 @@
 
 		animation: move-overlay 800s linear infinite;
 	}
-
-	section {
-		background-color: rgba(0, 0, 0, 0.8);
-	}
-
-	@supports (backdrop-filter: blur()) {
-		section {
-			backdrop-filter: blur(3px);
-			background-color: transparent;
-		}
-	}
 }
 
 @media only screen and (max-width: 812px) {
