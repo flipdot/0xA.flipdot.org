@@ -1,6 +1,6 @@
 import "babel-polyfill";
 import SVG from "svg.js";
-import FontFaceObserver from 'fontfaceobserver';
+import FontFaceObserver from "fontfaceobserver";
 import { randomNumber, randomOption } from "./random";
 
 const FONT_FAMILY = "ISOCPEUR";
@@ -25,7 +25,7 @@ function makeFlyer(container) {
   const rocket = drawRocket(draw);
   const { slogan, size: sloganSize } = drawSlogan(draw);
 
-  const fontEffect = randomOption(["invert", "outline", "outline"]);
+  const fontEffect = randomOption(["invert", "outline", "outline"] as const);
 
   if (fontEffect === "invert") {
     // invert slogan inside of rocket
@@ -61,7 +61,7 @@ function positionRandomly(draw, obj, paddingX = 0, paddingY = 0) {
 }
 
 
-var font = new FontFaceObserver('ISOCPEUR');
+var font = new FontFaceObserver("ISOCPEUR");
 font.load().then(() => {
   makeFlyer(document.getElementById("header"));
   makeStars(document.getElementById("stars"));
