@@ -22,10 +22,20 @@
 	}
 
 	.stars {
-		z-index: -2;
+		z-index: -3;
 		svg {
 			animation: spin 800s linear infinite;
 		}
+	}
+
+	#constellations {
+		z-index: -2;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		width: 640px;
+		height: 610px;
+		background: url(../images/wagen.svg) no-repeat;
 	}
 
 	#stars-overlay {
