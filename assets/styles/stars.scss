@@ -1,3 +1,27 @@
+#stars, #stars-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#stars-overlay { z-index: -2; }
+#stars { z-index: -3; }
+
+#constellations {
+	z-index: -1;
+	position: fixed;
+	top: 50px;
+	left: 50px;
+	width: 383px;
+	height: 365px;
+	background: url(../images/wagen.svg) no-repeat;
+}
+
 @media not screen and (max-width: 812px) {
 
 	@keyframes move-overlay {
@@ -10,39 +34,13 @@
 		to { transform: translateZ(0) rotate(360deg); }
 	}
 
-	#stars, #stars-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
-
-	#stars {
-		z-index: -3;
-		svg {
-			animation: spin 900s linear infinite;
-		}
+	#stars svg {
+		animation: spin 900s linear infinite;
 	}
 
 	#stars-overlay {
 		background: transparent url(../images/overlay.png) repeat top center;
-		z-index: -2;
-
 		animation: move-overlay 800s linear infinite;
-	}
-
-	#constellations {
-		z-index: -1;
-		position: fixed;
-		top: 50px;
-		left: 50px;
-		width: 383px;
-		height: 365px;
-		background: url(../images/wagen.svg) no-repeat;
 	}
 }
 
@@ -53,4 +51,7 @@
 	#stars svg {
 		animation: none;
 	}
+	// #stars {
+	// 	background: #000 url(../images/stars.svg) repeat top center;
+	// }
 }
