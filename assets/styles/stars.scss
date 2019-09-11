@@ -29,7 +29,7 @@
 	}
 
 	.stars-overlay {
-		background: transparent url(overlay.png) repeat top center;
+		background: transparent url(../images/overlay.png) repeat top center;
 		z-index: -1;
 
 		animation: move-overlay 800s linear infinite;
