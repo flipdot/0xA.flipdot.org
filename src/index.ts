@@ -4,6 +4,7 @@ import FontFaceObserver from "fontfaceobserver";
 import { randomNumber, randomOption } from "./random";
 
 const FONT_FAMILY = "ISOCPEUR";
+const FONT_OPTIONS = ["invert", "outline"] as const;
 
 function makeStars(container) {
   const { width, height } = container.getBoundingClientRect();
@@ -25,25 +26,32 @@ function makeFlyer(container) {
   const rocket = drawRocket(draw);
   const { slogan, size: sloganSize } = drawSlogan(draw);
 
-  const fontEffect = randomOption(["invert", "outline", "outline"] as const);
+  const fontEffect = randomOption(FONT_OPTIONS);
 
-  if (fontEffect === "invert") {
-    // invert slogan inside of rocket
-    const blackSlogan = slogan.clone();
-    blackSlogan.fill("#000");
-    draw
-      .group()
-      .add(blackSlogan)
-      .maskWith(rocket.clone());
-  }
-
-  if (fontEffect === "outline") {
-    // invert slogan inside of rocket
-    const blackSlogan = slogan.clone();
-    blackSlogan
-      .stroke({ color: "#000", width: Math.max(sloganSize / 8, 2) })
-      .attr({ "stroke-linejoin": "round" });
-    slogan.front();
+  switch(fontEffect)
+  {
+    case "invert": {
+      // invert slogan inside of rocket
+      const blackSlogan = slogan.clone();
+      blackSlogan.fill("#000");
+      draw
+        .group()
+        .add(blackSlogan)
+        .maskWith(rocket.clone());
+        break;
+    }
+    case "outline": {
+      // invert slogan inside of rocket
+      const blackSlogan = slogan.clone();
+      blackSlogan
+        .stroke({ color: "#000", width: Math.max(sloganSize / 8, 2) })
+        .attr({ "stroke-linejoin": "round" });
+      slogan.front();
+      break;
+    }
+    default:
+      assertNever(fontEffect);
+      break;
   }
 
   drawTitle(draw);
@@ -61,7 +69,7 @@ function positionRandomly(draw, obj, paddingX = 0, paddingY = 0) {
 }
 
 
-var font = new FontFaceObserver("ISOCPEUR");
+var font = new FontFaceObserver(FONT_FAMILY);
 font.load().then(() => {
   makeFlyer(document.getElementById("header"));
   makeStars(document.getElementById("stars"));
@@ -115,12 +123,12 @@ function drawRocket(draw) {
 function drawSlogan(draw) {
   const slogan = draw.group();
 
-  const wrap = randomOption(["none", "word", "half"]);
+  const wrap = randomOption(["none", "word", "half"] as const);
 
   let text = "10 YEARS IN SPACE";
   let size = randomNumber(21, 25);
-  let anchor = randomOption(["start", "middle" /*, "end"*/]);
-  let rotation = randomOption([0, 90, 0, -90]);
+  let anchor = randomOption(["start", "middle" /*, "end"*/] as const);
+  let rotation = randomOption([0, 90, 0, -90] as const);
 
   switch(wrap)
   {
@@ -145,6 +153,9 @@ function drawSlogan(draw) {
       }
       break;
     }
+    default:
+      assertNever(wrap);
+      break;
   }
 
   let leading = randomNumber(1.1, 1.4);
@@ -254,3 +265,7 @@ function drawTitle(draw) {
   return group;
 }
 
+
+function assertNever(v: never): void {
+  // needed for type checker
+}
