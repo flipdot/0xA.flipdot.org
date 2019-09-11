@@ -10,7 +10,7 @@
 		to { transform: translateZ(0) rotate(360deg); }
 	}
 
-	.stars, .stars-overlay {
+	#stars, #stars-overlay {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -28,7 +28,7 @@
 		}
 	}
 
-	.stars-overlay {
+	#stars-overlay {
 		background: transparent url(../images/overlay.png) repeat top center;
 		z-index: -1;
 
@@ -37,10 +37,10 @@
 }
 
 @media only screen and (max-width: 812px) {
-	.stars-overlay {
+	#stars-overlay {
 		display: none;
 	}
-	.stars svg {
+	#stars svg {
 		animation: none;
 	}
 }
