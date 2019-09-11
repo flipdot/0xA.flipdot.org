@@ -69,7 +69,7 @@ function positionRandomly(draw, obj, paddingX = 0, paddingY = 0) {
 }
 
 
-var font = new FontFaceObserver(FONT_FAMILY);
+const font = new FontFaceObserver(FONT_FAMILY);
 font.load().then(() => {
   makeFlyer(document.getElementById("header"));
   makeStars(document.getElementById("stars"));
