@@ -12,6 +12,7 @@
     "svg.js": "^2.7.1"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "sass": "^1.23.0-module.beta.1"
   }
 }
