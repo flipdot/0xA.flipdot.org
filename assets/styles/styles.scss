@@ -121,6 +121,22 @@ address {
 	width: 16px;
 }
 
+.badge {
+	justify-content: center;
+	display: flex;
+	margin-top: 32px;
+}
+
+.badge img {
+	width: 60%;
+	filter: grayscale(1);
+	transition: .3s;
+}
+
+.badge img:hover {
+	filter: grayscale(0);
+}
+
 dt {
 	font-weight: bold;
 	padding-bottom: 4px;
