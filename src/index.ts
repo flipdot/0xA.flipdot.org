@@ -28,8 +28,7 @@ function makeFlyer(container) {
 
   const fontEffect = randomOption(FONT_OPTIONS);
 
-  switch(fontEffect)
-  {
+  switch (fontEffect) {
     case "invert": {
       // invert slogan inside of rocket
       const blackSlogan = slogan.clone();
@@ -38,7 +37,7 @@ function makeFlyer(container) {
         .group()
         .add(blackSlogan)
         .maskWith(rocket.clone());
-        break;
+      break;
     }
     case "outline": {
       // invert slogan inside of rocket
@@ -130,8 +129,7 @@ function drawSlogan(draw) {
   let anchor = randomOption(["start", "middle" /*, "end"*/] as const);
   let rotation = randomOption([0, 90, 0, -90] as const);
 
-  switch(wrap)
-  {
+  switch (wrap) {
     case "word": {
       text = text.split(" ").join("\n");
       size = rotation === 0 ? size * 1.9 : size * 1.7;
@@ -158,11 +156,9 @@ function drawSlogan(draw) {
       break;
   }
 
-  let leading = randomNumber(1.1, 1.4);
-
-  if (rotation !== 0) {
-    leading = randomNumber(1.0, 1.1);
-  }
+  const leading = rotation !== 0
+    ? randomNumber(1.0, 1.1)
+    : randomNumber(1.1, 1.4);
 
   const textElement = slogan.text(text).font({
     family: FONT_FAMILY,
