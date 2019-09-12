@@ -2,6 +2,7 @@ import "babel-polyfill";
 import SVG from "svg.js";
 import FontFaceObserver from "fontfaceobserver";
 import { randomNumber, randomOption } from "./random";
+import { assertNever, loadImage } from "./util";
 
 const FONT_FAMILY = "ISOCPEUR";
 const FONT_OPTIONS = ["invert", "outline"] as const;
@@ -259,9 +260,4 @@ function drawTitle(draw) {
   title.front();
 
   return group;
-}
-
-
-function assertNever(v: never): void {
-  // needed for type checker
 }
