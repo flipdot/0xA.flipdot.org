@@ -228,7 +228,7 @@ function drawDate(draw) {
 function drawStars(draw) {
   const group = draw.group();
 
-  const STAR_COUNT = 145;
+  const STAR_COUNT = Math.round(draw.viewbox().width / 10 * 3);
 
   for (let i = 0; i < STAR_COUNT; i++) {
     const star = group.circle(randomNumber(0.1, 2)).fill("#fff");
