@@ -121,12 +121,13 @@ function drawRocket(draw) {
 }
 
 function drawSlogan(draw) {
+  const viewbox = draw.viewbox();
   const slogan = draw.group();
 
   const wrap = randomOption(["none", "word", "half"] as const);
 
   let text = "10 YEARS IN SPACE";
-  let size = randomNumber(21, 25);
+  let size = randomNumber(viewbox.w > 560 ? 21 : 14, viewbox.w > 560 ? 25 : 18);
   let anchor = randomOption(["start", "middle" /*, "end"*/] as const);
   let rotation = randomOption([0, 90, 0, -90] as const);
 
