@@ -129,17 +129,20 @@ address {
 }
 
 .badge {
-	justify-content: center;
-	display: flex;
 	margin-top: 32px;
 
-	img {
-		width: 60%;
-		filter: grayscale(1);
-		transition: filter 0.3s;
+	picture {
+		justify-content: center;
+		display: flex;
 
-		&:hover {
-			filter: grayscale(0);
+		img {
+			width: 60%;
+			filter: grayscale(1);
+			transition: filter 0.3s;
+
+			&:hover {
+				filter: grayscale(0);
+			}
 		}
 	}
 }
