@@ -30,7 +30,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin-bottom: 10px;
+	margin-bottom: 13px;
 	color: var(--headline-color);
 	font-family: 'ISOCPEUR';
 	font-weight: normal;
@@ -48,10 +48,11 @@ h1 {
 	line-height: 4.5rem;
 	margin-top: 3rem;
 }
+
 h2 {
 	font-size: 2.828rem;
-	line-height: 3rem;
-	margin-top: 3rem;
+	line-height: 2.5rem;
+	margin-top: 2.5rem;
 }
 
 hr {
@@ -108,6 +109,7 @@ p {
 	text-align: left;
 	line-height: 1.35em;
 	font-size: 1.15em;
+	margin-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 812px) {
@@ -138,7 +140,7 @@ input[type="checkbox"] {
 
 .badge {
 	margin-top: 32px;
-	margin-bottom: 510px;
+	margin-bottom: 525px;
 
 	filter: grayscale(1);
 	transition: filter 0.3s;
