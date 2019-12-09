@@ -7,14 +7,14 @@
     "gh-pages": "parcel build --no-source-maps index.html && mv CNAME dist"
   },
   "dependencies": {
-    "@types/node": "^12.7.5",
+    "@types/node": "^12.12.14",
     "fontfaceobserver": "^2.1.0",
-    "parcel": "^1.12.3",
+    "parcel": "^1.12.4",
     "svg.js": "^2.7.1"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
-    "sass": "^1.23.0-module.beta.1",
-    "typescript": "^3.6.3"
+    "sass": "^1.23.7",
+    "typescript": "^3.7.3"
   }
 }
