@@ -1,0 +1,12 @@
+#stars {
+  background: #000 url(/stars.b5289a2e.svg) repeat top center;
+}
+
+.lead {
+  height: auto;
+  width: var(--page-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=/noscript.3b7826fa.css.map */
